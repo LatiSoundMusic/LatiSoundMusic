@@ -1,9 +1,10 @@
 let slideIndex = 0;
 const slides = document.querySelector('.slides');
-const totalSlides = slides.children.length;
+const totalSlides = slides ? slides.children.length : 0;
 
 // Función para mover los slides
 function moveSlide(direction) {
+    if (!slides) return; // Evita errores si no hay carrusel
     slideIndex += direction;
 
     // Si se pasa al anterior del primero
@@ -21,20 +22,24 @@ function moveSlide(direction) {
 
 // Actualiza la posición del slide
 function updateSlidePosition() {
-    slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+    if (slides) {
+        slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+    }
 }
 
-// Movimiento automático cada 5 segundos
-setInterval(() => {
-    moveSlide(1);
-}, 10000);
+// Movimiento automático cada 10 segundos
+if (slides) {
+    setInterval(() => {
+        moveSlide(1);
+    }, 10000);
+}
 
 // Permite que las funciones estén disponibles para HTML
 window.moveSlide = moveSlide;
 
-
 function scrollReel(direction) {
     const reel = document.querySelector('.reel-container');
+    if (!reel) return; // Evita errores si no hay reel
     const scrollAmount = 320;
     const maxScroll = reel.scrollWidth - reel.clientWidth;
     
@@ -50,4 +55,21 @@ function scrollReel(direction) {
         left: newScrollLeft,
         behavior: 'smooth'
     });
+}
+
+function toggleMobileMenu() {
+    const mobileNav = document.querySelector('.mobile-nav');
+    if (mobileNav) {
+        mobileNav.classList.toggle('active');
+    }
+}
+
+const hamburger = document.querySelector('.hamburger');
+const closeMenu = document.querySelector('.close-menu');
+
+if (hamburger) {
+    hamburger.addEventListener('click', toggleMobileMenu);
+}
+if (closeMenu) {
+    closeMenu.addEventListener('click', toggleMobileMenu);
 }
