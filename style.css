@@ -16,7 +16,7 @@
     padding-left: 15px;
 }
 
-.barra-navegacion nav a {
+.barra-navegacion nav.desktop-nav a {
     color: white;
     text-decoration: none; /* Esto quita el subrayado */
     margin: 0 15px;
