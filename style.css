@@ -1,0 +1,215 @@
+.barra-navegacion {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 0px; /* Añadido padding para espacio interno */
+    margin: 0 0 0; /* Añadido margen para centrar el contenido */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+}
+
+.barra-navegacion h1 a {
+    color: white;
+    text-decoration: none; /* Esto quita el subrayado */
+    font-size: 24px;
+    font-family: "Helvetica", Arial, sans-serif; /* Prioriza Helvetica, con alternativas */
+    padding-left: 15px;
+}
+
+.barra-navegacion nav a {
+    color: white;
+    text-decoration: none; /* Esto quita el subrayado */
+    margin: 0 15px;
+    font-size: 16px;
+    font-family: "Helvetica", Arial, sans-serif; /* Prioriza Helvetica, con alternativas */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 10px 0; /* Añadido padding para espacio interno */
+    position: relative; /* Asegura que el footer se posicione correctamente */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    height: 100%; /* Asegura que el footer ocupe todo el alto disponible */
+    bottom: 0; /* Asegura que el footer esté al final de la página */
+}
+
+.footer-left {
+    margin: 0;
+    padding: 0; /* Añadido padding para espacio interno */
+    display: flex;
+    margin-left: 20%;
+    margin-top: 5%;
+}
+
+.footer-left a {
+    color: white;
+    text-decoration: none; /* Esto quita el subrayado */
+    font-size: 40px;
+    font-family: "Helvetica", Arial, sans-serif; /* Prioriza Helvetica, con alternativas */
+}
+
+.footer-right {
+    display: block;
+    justify-content: flex-end; /* Alinea los enlaces a la derecha */
+    align-items: center; /* Centra verticalmente los enlaces */
+    margin-right: 15px; /* Añadido margen para espacio interno */
+    margin-left: 59%;
+    margin-top: -120px; /* Ajusta la posición vertical de los enlaces */
+    margin-bottom: 10px; /* Añadido margen inferior para espacio */
+    position: static;
+}
+
+.footer-right a {
+    color: white;
+    display: block;
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: 14px;
+    font-family: "Helvetica", Arial, sans-serif; /* Prioriza Helvetica, con alternativas */
+    padding: 5px;
+}
+
+.footer-right a i {
+    margin-right: 8px; /* Espacio entre el ícono y el texto */
+    font-size: 16px; /* Tamaño del ícono */
+    color: white; /* Asegura que el ícono sea blanco */
+}
+
+.derechos {
+    font-family: "Helvetica", Arial, sans-serif; /* Prioriza Helvetica, con alternativas */
+    font-size: 10px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    height: 500px;
+    width: 100%;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.carrusel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex: 0 0 100%;
+}
+
+.carrusel button.prev,
+.carrusel button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carrusel button.prev {
+    left: 10px;
+}
+
+.carrusel button.next {
+    right: 10px;
+}
+
+
+.reel-section {
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+.reel-section h2 {
+    text-align:justify;
+    font-family: "Helvetica", Arial, sans-serif; /* Prioriza Helvetica, con alternativas */
+    font-size: 24px;
+    margin-left: 55px;
+}
+
+.reel-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 15px;
+    padding: 10px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    margin-left: 45px;
+    margin-right: 45px;
+}
+
+.reel-container::-webkit-scrollbar {
+    display: none;
+}
+
+.reel-item {
+    flex: 0 0 200px;
+    height: 355px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: black;
+}
+
+.reel-item iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    object-fit: cover;
+}
+
+.reel-prev,
+.reel-next {
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    background-color: transparent;
+    color: black;
+    border: none;
+    cursor: pointer;
+    z-index: 5;
+    padding: 10px;
+}
+
+.reel-prev {
+    left: 10px;
+}
+
+.reel-next {
+    right: 10px;
+}
