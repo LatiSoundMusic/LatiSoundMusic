@@ -213,3 +213,73 @@ header {
 .reel-next {
     right: 10px;
 }
+
+.barra-navegacion .hamburger {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+}
+
+.barra-navegacion nav.mobile-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #1a1a1a;
+    flex-direction: column;
+    padding: 20px;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.barra-navegacion nav.mobile-nav.active {
+    right: 0;
+}
+
+.barra-navegacion nav.mobile-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "Helvetica", Arial, sans-serif;
+    margin: 15px 0;
+    display: block;
+}
+
+.barra-navegacion nav.mobile-nav .close-menu {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+@media (max-width: 768px) {
+    .barra-navegacion nav.desktop-nav {
+        display: none;
+    }
+
+    .barra-navegacion .hamburger {
+        display: block;
+    }
+
+    .barra-navegacion nav.mobile-nav {
+        display: flex;
+    }
+
+    .footer-left {
+        margin-left: 10%;
+    }
+
+    .footer-right {
+        margin-left: 10%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
